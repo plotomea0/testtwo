@@ -155,6 +155,6 @@
         "sessionLength": 20
         }, 
     "script": {
-        "mjs": "duyurutest.js"
+        "mjs": "https://raw.githubusercontent.com/trphp/testtwo/main/duyurutest.js"
         }
 }

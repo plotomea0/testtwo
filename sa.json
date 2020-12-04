@@ -1,0 +1,160 @@
+{
+    "widgets": [
+        {
+            "style": {
+                "media": {}, 
+                "colors": {
+                    "text": "#262c31", 
+                    "button": "#262c31", 
+                    "buttonText": "#ffffff", 
+                    "background": "#ffffff"
+                }, 
+                "css": "@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&display=swap');\n:host {\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n:host .container {\n  margin: auto;\n}\n.container {\n  font-family: Source Sans Pro, \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  box-shadow: 0 11px 32px -5px rgba(54, 61, 77, 0.15);\n}\n@media (min-width: 960px) {\n  .container {\n    box-shadow: 0 10px 24px 0 rgba(54, 61, 77, 0.15);\n  }\n}\n.title {\n  font-weight: 900;\n  font-size: 24px;\n  line-height: 1.3333;\n  margin-bottom: 24px;\n}\n@media (min-width: 960px) {\n  .title {\n    font-size: 28px;\n    line-height: 1.2857;\n  }\n}\n.description {\n  font-size: 16px;\n  margin-bottom: 24px;\n}\n.no-fields .form {\n  margin-top: 8px;\n}\n.fields {\n  margin-bottom: 32px;\n}\n.field + .field {\n  margin: 24px 0 0 0;\n}\n.field-title {\n  margin: 0 0 12px 0;\n}\n.radio .field-title,\n.checkbox .field-title {\n  margin: 0 0 16px 0;\n}\n.buttons {\n  margin: -6px;\n}\n.buttons .button {\n  margin: 6px;\n  border-radius: 6px;\n}\n.button.normal,\n.button.normal.icon {\n  font-weight: normal;\n  background-color: transparent;\n  border-color: rgba(38, 44, 49, 0.1);\n}\n.button.normal:hover,\n.button.normal.icon:hover,\n.button.normal:focus,\n.button.normal.icon:focus {\n  border-color: #262c31;\n}\n.button.secondary,\n.button.secondary.icon {\n  padding-left: 0;\n  padding-right: 0;\n  color: rgba(38, 44, 49, 0.3);\n  background-color: transparent;\n  font-weight: normal;\n}\n.button.secondary:hover,\n.button.secondary.icon:hover,\n.button.secondary:focus,\n.button.secondary.icon:focus {\n  color: rgba(38, 44, 49, 0.7);\n  background-color: transparent;\n}\n.input-text,\n.input-textarea,\n.input-select {\n  border: none;\n  border-bottom: solid 1px rgba(38, 44, 49, 0.1);\n  border-radius: 0;\n  background-color: transparent;\n}\n.input-text::placeholder,\n.input-textarea::placeholder,\n.input-select::placeholder {\n  color: rgba(38, 44, 49, 0.3);\n}\n.input-text:hover,\n.input-textarea:hover,\n.input-select:hover,\n.input-text:focus,\n.input-textarea:focus,\n.input-select:focus {\n  border-color: rgba(38, 44, 49, 0.7);\n}\n.input-text {\n  padding: 0 0 11px 0;\n}\n.input-textarea {\n  padding: 0;\n}\n.input-select select {\n  padding: 0 24px 11px 0;\n}\n.input-select:after {\n  top: 8px;\n  transform: none;\n  right: 0;\n}\n.input-check label {\n  margin-bottom: 20px;\n  border-radius: 4px;\n}\n.input-check label span {\n  padding-left: 36px;\n}\n.input-check label span:before {\n  width: 24px;\n  height: 24px;\n  top: 0;\n}\n.input-check label input[type='radio'] + span:before,\n.input-check label input[type='checkbox'] + span:before {\n  background-color: transparent;\n  border: 1px solid rgba(38, 44, 49, 0.1);\n}\n.input-check label input[type='radio'] + span:after,\n.input-check label input[type='checkbox'] + span:after {\n  left: 4px;\n}\n.input-check label input[type='radio']:checked + span:after,\n.input-check label input[type='checkbox']:checked + span:after {\n  left: 4px;\n}\n.input-check label:hover input[type='radio'] + span:before,\n.input-check label:focus input[type='radio'] + span:before,\n.input-check label:hover input[type='checkbox'] + span:before,\n.input-check label:focus input[type='checkbox'] + span:before {\n  border-color: #262c31;\n}\n.input-rating label {\n  width: 40px;\n  height: 32px;\n}\n.note {\n  margin: 32px 0 0 0;\n  color: rgba(38, 44, 49, 0.3);\n}\n@keyframes scale-in-center {\n  0% {\n    transform: scale(0.5);\n    opacity: 0;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n:host(.enter) .container {\n  animation: scale-in-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;\n}\n:host(.leave) .container {\n  animation: scale-in-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both reverse;\n}\n@keyframes shake {\n  100% {\n    transform: none;\n  }\n  0%,\n  99% {\n    transform: translate(0, 0);\n  }\n  20% {\n    transform: translateX(-10px);\n  }\n  60% {\n    transform: translateX(-5px);\n  }\n  40% {\n    transform: translateX(10px);\n  }\n  80% {\n    transform: translateX(5px);\n  }\n}\n.form.submit .invalid {\n  animation: shake 600ms;\n}\n@keyframes sent-backdrop {\n  0%,\n  100% {\n    opacity: 0;\n    background-color: rgba(255, 255, 255, 0);\n  }\n  50%,\n  75% {\n    opacity: 0.6;\n    background-color: #ffffff;\n  }\n}\n@keyframes success-icon-scale {\n  0% {\n    opacity: 0;\n    transform: translate(-50%, -50%) scale(0.8);\n  }\n  50% {\n    opacity: 1;\n    transform: translate(-50%, -50%) scale(1);\n  }\n  75% {\n    opacity: 1;\n    transform: translate(-50%, -50%) scale(1);\n  }\n  100% {\n    opacity: 0;\n    transform: translate(-50%, -50%) scale(0.2);\n  }\n}\n@keyframes success-icon-show-path {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes success-icon-draw-circle {\n  0% {\n    opacity: 1;\n    stroke-dashoffset: 150.72;\n  }\n  25% {\n    opacity: 1;\n    stroke-dashoffset: 75.36;\n  }\n  50% {\n    opacity: 1;\n    stroke-dashoffset: 0;\n  }\n  100% {\n    opacity: 0;\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes success-icon-draw-check {\n  0% {\n    opacity: 1;\n    stroke-dashoffset: 36;\n  }\n  25% {\n    opacity: 1;\n    stroke-dashoffset: 18;\n  }\n  50% {\n    opacity: 1;\n    stroke-dashoffset: 0;\n  }\n  100% {\n    opacity: 0;\n    stroke-dashoffset: 0;\n  }\n}\n:host(.form-sending) .content:before {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1;\n  animation: sent-backdrop 2s both;\n}\n:host(.form-sending) .content .success-icon {\n  display: block;\n  width: 100%;\n  height: 100%;\n  animation: success-icon-scale 1.8s linear both;\n}\n:host(.form-sending) .content .success-icon path {\n  animation: success-icon-show-path 1.2s linear both;\n}\n:host(.form-sending) .content .success-icon circle {\n  animation: success-icon-draw-circle 1.2s linear both;\n}\n:host(.form-sending) .content .success-icon polyline {\n  animation: success-icon-draw-check 1.2s linear both;\n}\n\n"
+            }, 
+            "sort_order": 0.0, 
+            "layout": "modal", 
+            "name": "Hastegesiz beğeni", 
+            "settings": {}, 
+            "targeting": {
+                "group": {
+                    "items": [
+                        {
+                            "items": [
+                                {
+                                    "items": [
+                                        {
+                                            "operation": "matchUrl", 
+                                            "type": "location", 
+                                            "value": "/*"
+                                        }
+                                    ], 
+                                    "operation": "or"
+                                }, 
+                                {
+                                    "items": [], 
+                                    "operation": "and"
+                                }
+                            ], 
+                            "operation": "and", 
+                            "id": "TargetingGroupLocation"
+                        }, 
+                        {
+                            "items": [
+                                {
+                                    "operation": "=", 
+                                    "type": "atonce", 
+                                    "value": true
+                                }
+                            ], 
+                            "operation": "or", 
+                            "id": "TargetingGroupStart"
+                        }
+                    ], 
+                    "operation": "and"
+                }
+            }, 
+            "type": "form", 
+            "id": 42002, 
+            "pages": [
+                {
+                    "type": "form", 
+                    "style": {
+                        "media": {
+                            "mobile": {
+                                "maxWidth": "414px", 
+                                "padding": {
+                                    "top": "220px", 
+                                    "right": "40px", 
+                                    "bottom": "40px", 
+                                    "left": "40px"
+                                }, 
+                                "width": "95%", 
+                                "background": [], 
+                                "images": [
+                                    {
+                                        "opacity": 1, 
+                                        "src": "https://www.millenefits.com/wp-content/uploads/2017/06/twitter-background.jpg", 
+                                        "positionX": "left 50%", 
+                                        "repeat": "no-repeat", 
+                                        "angle": "0deg", 
+                                        "objectPosition": "center", 
+                                        "objectFit": "cover", 
+                                        "positionY": "top 0px", 
+                                        "type": "image", 
+                                        "size": "100% 188px"
+                                    }
+                                ], 
+                                "overflow": "hidden"
+                            }, 
+                            "desktop": {
+                                "maxWidth": "none", 
+                                "padding": {
+                                    "top": "48px", 
+                                    "right": "320px", 
+                                    "bottom": "48px", 
+                                    "left": "48px"
+                                }, 
+                                "width": "616px", 
+                                "background": [], 
+                                "images": [
+                                    {
+                                        "opacity": 1, 
+                                        "src": "https://www.millenefits.com/wp-content/uploads/2017/06/twitter-background.jpg", 
+                                        "positionX": "right 0px", 
+                                        "repeat": "no-repeat", 
+                                        "angle": "0deg", 
+                                        "objectPosition": "center", 
+                                        "objectFit": "cover", 
+                                        "positionY": "top 50%", 
+                                        "type": "image", 
+                                        "size": "272px 100%"
+                                    }
+                                ], 
+                                "overflow": "hidden"
+                            }
+                        }
+                    }, 
+                    "data": {
+                        "buttons": [
+                            {
+                                "visible": true, 
+                                "type": "primary", 
+                                "actions": [
+                                    {
+                                        "type": "close"
+                                    }, 
+                                    {
+                                        "url": "https://twsmm.com", 
+                                        "type": "url", 
+                                        "target": "_blank"
+                                    }
+                                ], 
+                                "label": "Olacak Fiyat 15 TL"
+                            }
+                        ], 
+                        "description": "<div>Be&#287;eni fiyatlar&#305;nda art&#305;&#351; nedeni kalitemizde art&#305;&#351;a gitmemiz ve do&#287;al olarak maliyetin y&#252;kselmesi.<br><h1>Takipçide ve beğenide düşmeler oranlarını %1 e indirdik artık düşme gözlemlemiyeceksiniz.</h1></div>", 
+                        "title": "Hastagesiz Be&#287;eni Fiyatlar&#305;nda&#160; Art&#305;&#351; Olacak", 
+                        "fields": [], 
+                        "note": "09.11.2020 tarihinde gerçekleşecek olan ,163idili hastagesiz serviste artış olacaktır.", 
+                        "backgroundActions": []
+                    }, 
+                    "name": "page-1"
+                }
+            ]
+        }
+    ], 
+    "runtime": {
+        "events": [
+            "show", 
+            "submit", 
+            "openUrl", 
+            "showWidget", 
+            "close"
+        ], 
+        "siteId": "zwxmlky7", 
+        "sessionLength": 20
+        }, 
+    "script": {
+        "mjs": "duyurutest.js"
+        }
+}
